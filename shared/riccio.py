@@ -27,4 +27,12 @@ def fib(n):
 		return 1
 	return fib(n-1) + fib(n-2)
 
+def isLeapYear(year):
+	if year % 400 == 0:
+		return True
+	elif year % 100 == 0:
+		return False
+	elif year % 4 == 0:
+		return True
+	return False	
 		
