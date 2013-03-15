@@ -35,4 +35,13 @@ def isLeapYear(year):
 	elif year % 4 == 0:
 		return True
 	return False	
-		
+	
+def get_permutations(val):
+    result = []
+    if len(val) == 1:
+        result = [val]
+    else:
+        for i, c in enumerate(val):
+            for perm in get_permutations(val[:i] + val[i+1:]):
+                result += [c + perm]
+    return result		
