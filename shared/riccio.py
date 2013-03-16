@@ -45,3 +45,12 @@ def get_permutations(val):
             for perm in get_permutations(val[:i] + val[i+1:]):
                 result += [c + perm]
     return result		
+    
+def isPalindrome(n):
+	x = str(n)
+	y = ""
+	for i in range(len(x), 0, -1):
+		y += x[i-1]
+	if x == y:
+		return True
+	return False	
